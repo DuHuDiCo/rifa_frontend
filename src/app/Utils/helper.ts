@@ -1,2 +1,2 @@
-let baseUrl = "http://localhost:8001/api/v1"
+let baseUrl = "https://rifa-gmj.onrender.com/api/v1"
 export default baseUrl;
