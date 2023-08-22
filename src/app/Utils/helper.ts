@@ -1,2 +1,2 @@
-let baseUrl = "https://rifa-gmj.onrender.com/api/v1"
+let baseUrl = "https://rifagmj-production.up.railway.app/api/v1"
 export default baseUrl;

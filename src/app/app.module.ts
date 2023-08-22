@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { FinishedComponent } from './pages/home/finished/finished.component';
 import { FormsModule } from '@angular/forms';
+import { TratamientoDatosComponent } from './components/tratamiento-datos/tratamiento-datos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NavbarComponent,
     LoadingComponent,
-    FinishedComponent
+    FinishedComponent,
+    TratamientoDatosComponent
   ],
   imports: [
     BrowserModule,
