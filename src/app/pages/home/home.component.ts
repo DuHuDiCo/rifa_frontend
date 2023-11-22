@@ -16,8 +16,10 @@ export class HomeComponent {
   participante={
     "nombre": "",
     "email": "",
+    "cedula": "",
     "celular": "",
-    "celular2": ""
+    "celular2": "",
+    "sede": ""
   }
 
   constructor(private participanteService:ParticipanteService) { }

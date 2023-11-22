@@ -28,13 +28,37 @@
 
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label"> <strong>Email</strong>
-                                    </label>
-                                    <input type="email" class="form-control" [(ngModel)]="participante.email"
-                                        name="email" id="exampleFormControlInput1" required
-                                        placeholder="name@example.com">
+                                    <label for="exampleFormControlInput1" class="form-label"><strong> Sede </strong></label>
+                                    <Select class="form-select" [(ngModel)]="participante.sede" name="sede">
+                                        <option value="">Seleccionar Sede</option>
+                                        <option value="CEJA">CEJA</option>
+                                        <option value="MARINILLA">MARINILLA</option>
+                                        <option value="RIONEGRO">RIONEGRO</option>
+                                    </Select>
+
                                 </div>
+
                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="exampleFormControlInput1" class="form-label"> <strong>Email</strong>
+                                        </label>
+                                        <input type="email" class="form-control" [(ngModel)]="participante.email"
+                                            name="email" id="exampleFormControlInput1" required
+                                            placeholder="name@example.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="exampleFormControlInput1" class="form-label">
+                                            <strong>Numero Documento</strong>
+                                        </label>
+                                        <input type="text" class="form-control" [(ngModel)]="participante.cedula"
+                                            name="cedula" id="exampleFormControlInput1" required
+                                            placeholder="Documento">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row mt-2">
                                     <div class="col-md-6">
                                         <label for="inputEmail4" class="form-label"><strong>Celular</strong> </label>
                                         <input type="tel" [(ngModel)]="participante.celular" name="celular"
@@ -48,7 +72,10 @@
                                     </div>
                                 </div>
                                 <div class="alert alert-warning mt-3" role="alert">
-                                    Al dar clic al boton "Guardar", aceptas la politica de <a [routerLink]="'politica-tratamiento-datos-personales'">privacidad y autorización para el  tratamiento de datos personales.</a>
+                                    Al dar clic al boton "Guardar", aceptas la politica de <a
+                                        [routerLink]="'politica-tratamiento-datos-personales'">privacidad y autorización
+                                        para el
+                                        tratamiento de datos personales.</a>
                                 </div>
                                 <div class="text-center mt-3">
                                     <button class="btn btn-success ps-4 pe-4" (click)="guardarParticipante()"
