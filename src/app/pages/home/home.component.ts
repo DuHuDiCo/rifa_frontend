@@ -36,28 +36,28 @@ export class HomeComponent {
       return
     }
 
-    // this.loading = true
-    // this.form = false
+    this.loading = true
+    this.form = false
 
-    // this.participanteService.guardarParticipante(this.participante).subscribe(
-    //   (data:any)=>{
+    this.participanteService.guardarParticipante(this.participante).subscribe(
+      (data:any)=>{
 
-    //     Swal.fire({
-    //       position: 'top-end',
-    //       icon: 'success',
-    //       title: 'Participante Guardado Exitosamente',
-    //       showConfirmButton: false,
-    //       timer: 4000
-    //     })
-    //     setTimeout(() => {
-    //       this.loading= false
-    //       this.saved = true
-    //     }, 4000);
-    //   },(error:any)=>{
-    //     console.log(error);
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Participante Guardado Exitosamente',
+          showConfirmButton: false,
+          timer: 4000
+        })
+        setTimeout(() => {
+          this.loading= false
+          this.saved = true
+        }, 4000);
+      },(error:any)=>{
+        console.log(error);
 
-    //   }
-    // )
+      }
+    )
     console.log(this.participante);
 
 
