@@ -9,57 +9,58 @@ import Swal from 'sweetalert2';
 })
 export class HomeComponent {
 
-  loading:boolean = false
-  form:boolean = true
+  loading: boolean = false
+  form: boolean = true
   saved: boolean = false
 
-  participante={
-    "nombre": "",
-    "email": "",
-    "cedula": "",
-    "celular": "",
-    "celular2": "",
-    "sede": ""
+  participante = {
+    nombre: "",
+    email: "",
+    cedula: "",
+    celular: "",
+    celular2: "",
+    sede: ""
   }
 
-  constructor(private participanteService:ParticipanteService) { }
+  constructor(private participanteService: ParticipanteService) { }
 
   guardarParticipante() {
 
-    if(this.participante.nombre == '' || this.participante.email == '' || this.participante.celular == ''){
+    if(this.participante.nombre == '' || this.participante.email == '' || this.participante.celular == '' || this.participante.sede == ''){
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Something went wrong!',
-        
+
       })
       return
     }
 
-    this.loading = true
-    this.form = false
+    // this.loading = true
+    // this.form = false
 
-    this.participanteService.guardarParticipante(this.participante).subscribe(
-      (data:any)=>{
-        
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Participante Guardado Exitosamente',
-          showConfirmButton: false,
-          timer: 4000
-        })
-        setTimeout(() => {
-          this.loading= false
-          this.saved = true
-        }, 4000);
-      },(error:any)=>{
-        console.log(error);
-        
-      }
-    )
+    // this.participanteService.guardarParticipante(this.participante).subscribe(
+    //   (data:any)=>{
 
-    
+    //     Swal.fire({
+    //       position: 'top-end',
+    //       icon: 'success',
+    //       title: 'Participante Guardado Exitosamente',
+    //       showConfirmButton: false,
+    //       timer: 4000
+    //     })
+    //     setTimeout(() => {
+    //       this.loading= false
+    //       this.saved = true
+    //     }, 4000);
+    //   },(error:any)=>{
+    //     console.log(error);
+
+    //   }
+    // )
+    console.log(this.participante);
+
+
   }
 
 }
