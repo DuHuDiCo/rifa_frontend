@@ -19,14 +19,15 @@ export class HomeComponent {
     cedula: "",
     celular: "",
     celular2: "",
-    sede: ""
+    sede: "",
+    referenciaProducto: ""
   }
 
   constructor(private participanteService: ParticipanteService) { }
 
   guardarParticipante() {
 
-    if(this.participante.nombre == '' || this.participante.email == '' || this.participante.celular == '' || this.participante.sede == ''){
+    if (this.participante.nombre == '' || this.participante.email == '' || this.participante.celular == '' || this.participante.sede == '') {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -40,7 +41,7 @@ export class HomeComponent {
     this.form = false
 
     this.participanteService.guardarParticipante(this.participante).subscribe(
-      (data:any)=>{
+      (data: any) => {
 
         Swal.fire({
           position: 'top-end',
@@ -50,10 +51,10 @@ export class HomeComponent {
           timer: 4000
         })
         setTimeout(() => {
-          this.loading= false
+          this.loading = false
           this.saved = true
         }, 4000);
-      },(error:any)=>{
+      }, (error: any) => {
         console.log(error);
 
       }

@@ -90,6 +90,16 @@
                                             [(ngModel)]="participante.celular2" name="celular2" id="inputPassword4">
                                     </div>
                                 </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <textarea [(ngModel)]="participante.referenciaProducto"
+                                                name="referenciaProducto" class="form-control"
+                                                placeholder="Referencia Producto" style="height: 100px"></textarea>
+                                            <label>Referencia Producto</label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="alert alert-warning mt-3" role="alert">
                                     Al dar clic al boton "Guardar", aceptas la politica de <a
                                         [routerLink]="'politica-tratamiento-datos-personales'">privacidad y autorización
