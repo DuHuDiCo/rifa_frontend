@@ -27,11 +27,11 @@ export class HomeComponent {
 
   guardarParticipante() {
 
-    if (this.participante.nombre == '' || this.participante.email == '' || this.participante.celular == '' || this.participante.sede == '') {
+    if (this.participante.nombre == '' || this.participante.email == '' || this.participante.celular == '' || this.participante.sede == '' || this.participante.referenciaProducto == '') {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Something went wrong!',
+        text: 'Llene Todos Los Datos',
 
       })
       return
